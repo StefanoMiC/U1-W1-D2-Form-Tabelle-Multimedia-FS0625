@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U1-W1-D2</title>
+    <style>
+        table {
+            width: 100%;
+            min-width: 380px;
+
+            border-collapse: collapse;
+        }
+
+        /* per poter impostare un bordo all'intera riga bisogna anche prevedere sull'elemento table un border-collapse: collapse */
+        tr {
+            border: 2px solid black;
+        }
+
+        /* th,
+        td {
+            border: 2px solid black;
+        } */
+        th,
+        td {
+            padding: 0.5rem;
+        }
+
+        th {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Tabelle</h1>
+        <!-- la tabella è suddivisa per righe tr -->
+        <!-- la prima conterrà le intestazioni th -->
+        <!-- tutte le successive avranno i dati td -->
+        <table>
+            <caption>Utenti</caption>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nome</th>
+                    <th>Cognome</th>
+                    <th>Indirizzo</th>
+                    <th>Telefono</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!-- questa cella si estenderà verso il BASSO per 4 posizioni (esclusa quella della th iniziale) -->
+                    <td rowspan="4">
+                        Utenti
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>Stefano</td>
+                    <td>Miceli</td>
+                    <td>Via dei bardi 3</td>
+                    <td>33372716212</td>
+                </tr>
+                <tr>
+                    <td>Stefano</td>
+                    <!-- questa cella si estenderà per due posizioni in orizzontale verso destra -->
+                    <td colspan="2">Miceli</td>
+
+                    <td>33372716212</td>
+                </tr>
+                <tr>
+                    <td>Stefano</td>
+                    <td>Miceli</td>
+                    <td>Via dei bardi 3</td>
+                    <td>33372716212</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4" style="text-align: right">Totale:</td>
+                    <td>12972</td>
+                </tr>
+            </tfoot>
+        </table>
+
+
+
+    </main>
+</body>
+
+</html>

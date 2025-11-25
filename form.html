@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            width: max-content;
+            /* margin inline è la direzione orizzontale (x) */
+            /* margin block è la direzione verticale (y) */
+            margin-inline: auto;
+        }
+
+        /* form div {
+            display: inline-block;
+        } */
+
+        label {
+            display: block;
+        }
+
+        input {
+            margin-bottom: 10px;
+        }
+
+        #miscellaneous label {
+            display: inline-block
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Forms</h1>
+
+    <form onsubmit="alert('form inviato')">
+        <fieldset>
+            <legend>Anagrafica</legend>
+            <div>
+                <label for="name-input">Nome</label>
+                <input id="name-input" type="text" placeholder="dicci il tuo nome" required autofocus>
+            </div>
+
+            <div>
+                <label for="surname-input">Cognome</label>
+                <input id="surname-input" type="text" placeholder="qual è il tuo cognome" required>
+            </div>
+
+            <!-- <div>
+                <label for="email-input">Email</label>
+                <input id="email-input" type="email" placeholder="tizio@caio.com">
+            </div> -->
+        </fieldset>
+        <fieldset>
+            <legend>Posizione</legend>
+            <label for="region">Regioni</label>
+            <select id="region" required>
+                <option value="">Seleziona la tua regione</option>
+                <option value="fvg">Friuli Venezia Giulia</option>
+                <option value="veneto">Veneto</option>
+                <option value="trentino">Trentino Alto Adige</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Note</legend>
+            <textarea placeholder="Aggiungi note su di te" rows="10" maxlength="50"
+                title="massimo 50 caratteri"></textarea>
+
+        </fieldset>
+        <fieldset id="miscellaneous">
+            <legend>Misc</legend>
+            <input type="checkbox" id="smoking" checked>
+            <label for="smoking">Fumatore</label>
+            <div>
+                <!-- per il funzionamento della label, ogni input deve avere un id univoco da associare come attributo for della sua label -->
+                <!-- MA tutti gli elementi radio DEVONO avere lo stesso name (identico) per funzionare in maniera esclusiva-->
+                <input type="radio" name="specialty" id="radio-1">
+                <label for="radio-1">HTML</label>
+
+                <input type="radio" name="specialty" id="radio-2">
+                <label for="radio-2">CSS</label>
+
+                <input type="radio" name="specialty" id="radio-3">
+                <label for="radio-3">JavaScript</label>
+            </div>
+        </fieldset>
+
+        <!-- <input type="button" value="invia"> -->
+        <button type="submit">Invia</button>
+        <button type="reset">Reset</button>
+        <button type="button">Bottone inerte</button>
+    </form>
+
+
+
+
+</body>
+
+</html>
